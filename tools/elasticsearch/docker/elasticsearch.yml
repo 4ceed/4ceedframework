@@ -1,0 +1,31 @@
+cluster:
+  name: ${CLUSTER_NAME}
+
+node:
+  master: ${NODE_MASTER}
+  data: ${NODE_DATA}
+
+security.manager.enabled: false
+network.host: _non_loopback:ipv4_
+
+path:
+  data: /data/data
+  logs: /data/log
+  plugins: /elasticsearch/plugins
+  work: /data/work
+
+bootstrap.mlockall: true
+
+http:
+  enabled: ${HTTP_ENABLE}
+  compression: true
+  cors:
+    enabled: true
+
+cloud:
+  kubernetes:
+    service: ${DISCOVERY_SERVICE}
+    namespace: ${NAMESPACE}
+discovery:
+    type: kubernetes
+    zen.ping.multicast.enabled: false
