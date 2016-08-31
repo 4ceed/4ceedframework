@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: t2c2curator
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: t2c2curator
+    spec:
+      containers:
+      - name: t2c2curator
+        image: t2c2/4ceedcurator
+        ports:
+        - containerPort: 9000
