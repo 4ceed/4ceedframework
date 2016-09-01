@@ -23,7 +23,14 @@ COPY . /clowder
 # change to user clowder
 WORKDIR /clowder
 
+RUN apt-get update
+RUN apt-get -y install screen
+RUN apt-get -y install supervisor
+RUN mkdir -p /var/log/supervisor
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
 RUN /clowder/sbt compile; exit 0
 
 # command to run when starting docker
-CMD ["/clowder/curator-start.sh"]
+# CMD ["/clowder/curator-start.sh"]
+CMD ["/usr/bin/supervisord"]

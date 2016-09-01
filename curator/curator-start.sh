@@ -84,4 +84,5 @@ fix_conf   "toolmanagerURI" "$TOOLMANAGER_URI"
 
 # Start clowder
 cd /clowder
-./sbt 'run'
+screen -d -m ./sbt run
+tail -f /dev/null
