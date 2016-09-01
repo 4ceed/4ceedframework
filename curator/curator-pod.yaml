@@ -1,0 +1,13 @@
+# Copy of pod.yaml without file extension for test
+apiVersion: v1
+kind: Pod
+metadata:
+  name: t2c2curator 
+  labels:
+    name: t2c2curator 
+spec:
+  containers:
+  - name: t2c2curator 
+    image: t2c2/4ceedcurator 
+    ports:
+    - containerPort: 9000

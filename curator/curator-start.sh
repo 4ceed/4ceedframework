@@ -83,5 +83,5 @@ fix_plugin "$TOOLMANAGER_URI" "11000" "services.ToolManagerPlugin"
 fix_conf   "toolmanagerURI" "$TOOLMANAGER_URI"
 
 # Start clowder
-# exec /clowder/sbt 'run' &
-nohup /clowder/sbt -Dhttp.port=9000 -Dhttp.address=0.0.0.0 'run' </dev/null >curator.log 2>&1 &
+cd /clowder
+./sbt 'run'
