@@ -14,3 +14,10 @@ spec:
         image: t2c2/4ceeduploader
         ports:
         - containerPort: 2309 
+        resources:
+          requests:
+            memory: "2048Mi"
+            cpu: "1000m"
+          limits:
+            memory: "4096Mi"
+            cpu: "2000m"
