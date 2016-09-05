@@ -15,4 +15,5 @@ spec:
   - name: transport
     port: 9300
     protocol: TCP
+  clusterIP: 192.168.3.2
   externalIPs: ["192.17.176.162"]

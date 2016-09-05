@@ -10,3 +10,4 @@ spec:
   selector:
     app: taskQueue
     component: rabbitmq
+  clusterIP: 192.168.3.153
