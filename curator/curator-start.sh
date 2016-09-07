@@ -84,6 +84,6 @@ fix_conf   "toolmanagerURI" "$TOOLMANAGER_URI"
 
 # Start clowder
 cd /clowder
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/clowder/
 cp /clowder/custom/* /clowder/conf/custom/
-screen -d -m ./sbt run
-tail -f /dev/null
+./sbt run

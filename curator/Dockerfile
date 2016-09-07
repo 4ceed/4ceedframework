@@ -32,5 +32,4 @@ COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 RUN /clowder/sbt compile; exit 0
 
 # command to run when starting docker
-# CMD ["/clowder/curator-start.sh"]
-CMD ["/usr/bin/supervisord"]
+CMD ["/clowder/curator-start.sh"]

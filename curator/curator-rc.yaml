@@ -14,10 +14,11 @@ spec:
         image: t2c2/4ceedcurator
         ports:
         - containerPort: 9000
+        stdin: true
         resources:
           requests:
-            memory: "16384Mi"
-            cpu: "4000m"
+            memory: "4096Mi"
+            cpu: "2000m"
           limits:
-            memory: "16384Mi"
+            memory: "8192Mi"
             cpu: "4000m"
