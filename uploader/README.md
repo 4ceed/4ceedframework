@@ -1,8 +1,13 @@
 4CeeD Uploader Deployment
 =====
+## Quick start
+Simply run the following command:
+```
+./uploader-deploy.sh
+```
 
 ## Preparation
-Before deploying 4CeeD uploader, first check-out the latest version from BitBucket into `4ceeduploader/` directorty under project's root. After that, copy file `uploader-deploy/Dockerfile` into `4ceeduploader/` directory.
+Before deploying 4CeeD uploader, first check-out the latest version from BitBucket into `4ceeduploader/` directorty. After that, copy file `uploader-deploy/Dockerfile` into `4ceeduploader/` directory.
 
 ## Build 4CeeD Uploader Docker image
 Next, build 4CeeD Uploader Docker image by running the following command under `4ceeduploader/`:
