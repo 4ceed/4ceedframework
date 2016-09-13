@@ -1,9 +1,9 @@
-4CeeD Curator Deployment
+4CeeD Dependency Tools Deployment 
 =====
 
 ## Quick start
 
 Simply run the following command:
 ```
-./curator-deploy.sh
+./tools-deploy.sh
 ```
