@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Deploy RabbitMQ
-$KUBECTL create -f rabbitmq-controller.yaml
-$KUBECTL create -f rabbitmq-service.yaml
+$KUBECTL create -f rabbitmq/rabbitmq-controller.yaml
+$KUBECTL create -f rabbitmq/rabbitmq-service.yaml
 
 # Deploy MongoDB 
-$KUBECTL create -f mongo-controller.yaml
-$KUBECTL create -f mongo-service.yaml
+$KUBECTL create -f mongodb/mongo-controller.yaml
+$KUBECTL create -f mongodb/mongo-service.yaml
 
 # Deploy Elasticsearch 
-$KUBECTL create -f es-rc.yaml
-$KUBECTL create -f es-svc.yaml 
+$KUBECTL create -f elasticsearch/es-rc.yaml
+$KUBECTL create -f elasticsearch/es-svc.yaml 

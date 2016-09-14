@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Setup environment variables
-export KUBECTL=/home/ubuntu/kubernetes/cluster/ubuntu/binaries/kubectl
+export KUBECTL=/home/phuong/kubernetes/cluster/ubuntu/binaries/kubectl
 
 # Setup tools
 echo "Deploy 4CeeD's dependent tools..."
