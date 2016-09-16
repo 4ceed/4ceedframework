@@ -7,7 +7,7 @@ EXPOSE 9000
 ENV CLOWDER_CONTEXT="/" \
     CLOWDER_ADMINS="pvnguye2@illinois.edu" \
     MONGO_URI="mongodb://192.168.3.162:27017/clowder" \
-    SMTP_HOST="" \
+    SMTP_HOST="express-smtp.cites.uiuc.edu" \
     RABBITMQ_EXCHANGE="clowder" \
     RABBITMQ_VHOST="%2F" \
     RABBITMQ_URI="amqp://guest:guest@192.168.3.153:5672/%2f" \
@@ -23,12 +23,7 @@ COPY . /clowder
 # change to user clowder
 WORKDIR /clowder
 
-RUN apt-get update
-RUN apt-get -y install screen
-RUN apt-get -y install supervisor
-RUN mkdir -p /var/log/supervisor
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-
+# Compile clowder
 RUN /clowder/sbt compile; exit 0
 
 # command to run when starting docker

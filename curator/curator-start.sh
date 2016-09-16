@@ -48,11 +48,11 @@ function fix_conf() {
 # Update configurations
 # admins
 if [ "$CLOWDER_ADMINS" == "" ]; then
-fix_conf   "registerThroughAdmins" "false"
-fix_conf   "initialAdmins" ""
+	fix_conf   "registerThroughAdmins" "false"
+	fix_conf   "initialAdmins" ""
 else
-fix_conf   "registerThroughAdmins" "true"
-fix_conf   "initialAdmins" "$CLOWDER_ADMINS"
+	fix_conf   "registerThroughAdmins" "true"
+	fix_conf   "initialAdmins" "$CLOWDER_ADMINS"
 fi
 
 # rabbitmq
@@ -67,9 +67,9 @@ fix_conf   "mongodbURI" "$MONGO_URI"
 # smtp
 fix_conf   "smtp.host" "$SMTP_HOST"
 if [ "$SMTP_HOST" == "" ]; then
-fix_conf   "smtp.mock" "true"
+	fix_conf   "smtp.mock" "true"
 else
-fix_conf   "smtp.mock" "false"
+	fix_conf   "smtp.mock" "false"
 fi
 
 # elasticsearch
@@ -86,4 +86,4 @@ fix_conf   "toolmanagerURI" "$TOOLMANAGER_URI"
 cd /clowder
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/clowder/
 cp /clowder/custom/* /clowder/conf/custom/
-./sbt run
+./sbt -DMONGOUPDATE=1 'run'
