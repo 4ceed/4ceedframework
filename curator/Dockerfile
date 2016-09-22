@@ -1,4 +1,4 @@
-# Install clowder server
+# Install curator server
 FROM openjdk:7
 MAINTAINER Phuong Nguyen <pvnguye2@illinois.edu>
 

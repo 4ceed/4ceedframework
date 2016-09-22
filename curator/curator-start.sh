@@ -45,6 +45,9 @@ function fix_conf() {
     fi
 }
 
+mkdir /clowder/custom
+mkdir /clowder/conf/custom
+
 # Update configurations
 # admins
 if [ "$CLOWDER_ADMINS" == "" ]; then
