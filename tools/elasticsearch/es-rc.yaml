@@ -16,7 +16,7 @@ spec:
       serviceAccount: elasticsearch
       containers:
       - name: es
-        image: t2c2/docker-elasticsearch-kubernetes
+        image: t2c2/docker-elasticsearch-kubernetes:2.4.0
         env:
         - name: "CLUSTER_NAME"
           value: "myesdb"
