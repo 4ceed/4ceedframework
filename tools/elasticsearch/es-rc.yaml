@@ -16,18 +16,8 @@ spec:
       serviceAccount: elasticsearch
       containers:
       - name: es
-        securityContext:
-          capabilities:
-            add:
-              - IPC_LOCK
         image: t2c2/docker-elasticsearch-kubernetes
         env:
-        - name: KUBERNETES_CA_CERTIFICATE_FILE
-          value: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
-        - name: NAMESPACE
-          valueFrom:
-            fieldRef:
-              fieldPath: metadata.namespace
         - name: "CLUSTER_NAME"
           value: "myesdb"
         - name: "DISCOVERY_SERVICE"
