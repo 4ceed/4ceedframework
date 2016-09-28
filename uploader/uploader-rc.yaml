@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: t2c2uploader 
-        image: t2c2/4ceeduploader
+        image: t2c2/4ceeduploader:16.09.2
         ports:
         - containerPort: 2309 
         resources:

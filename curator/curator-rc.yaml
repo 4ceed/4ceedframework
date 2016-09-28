@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: t2c2curator
-        image: t2c2/4ceedcurator
+        image: t2c2/4ceedcurator:16.09.2
         ports:
         - containerPort: 9000
         stdin: true
