@@ -9,5 +9,6 @@ $KUBECTL create -f mongodb/mongo-controller.yaml
 $KUBECTL create -f mongodb/mongo-service.yaml
 
 # Deploy Elasticsearch 
+$KUBECTL create -f elasticsearch/service-account.yaml
 $KUBECTL create -f elasticsearch/es-rc.yaml
 $KUBECTL create -f elasticsearch/es-svc.yaml 
