@@ -1,7 +1,9 @@
 #!/bin/bash
 
+source custom.conf
+
 # Setup environment variables
-export KUBECTL=/home/phuong/kubernetes/cluster/ubuntu/binaries/kubectl
+export KUBECTL
 
 # Shutdown 4CeeD's uploader 
 echo "Shutting down 4CeeD's uploader..."
