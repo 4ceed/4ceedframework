@@ -15,4 +15,4 @@ spec:
   - name: transport
     port: 9300
     protocol: TCP
-  clusterIP: 10.0.0.22
+  clusterIP: $ELASTICSEARCH_IP

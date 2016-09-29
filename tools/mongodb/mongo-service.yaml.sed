@@ -10,4 +10,4 @@ spec:
       targetPort: 27017
   selector:
     name: mongo
-  clusterIP: 10.0.0.33
+  clusterIP: $MONGODB_IP

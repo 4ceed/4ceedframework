@@ -10,4 +10,4 @@ spec:
   selector:
     app: taskQueue
     component: rabbitmq
-  clusterIP: 10.0.0.44
+  clusterIP: $RABBITMQ_IP
