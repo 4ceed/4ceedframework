@@ -11,7 +11,35 @@ spec:
     spec:
       containers:
       - name: t2c2curator
-        image: t2c2/4ceedcurator:16.09.2
+        image: t2c2/4ceedcurator
+        env:
+        # Environmental variables for container
+        - name: "CLOWDER_CONTEXT"
+          value: "/"
+        - name: "CLOWDER_ADMINS"
+          value: "pvnguye2@illinois.edu"
+        - name: "MONGO_URI"
+          value: "mongodb://192.168.3.162:27017/clowder"
+        - name: "SMTP_HOST"
+          value: "express-smtp.cites.uiuc.edu"
+        - name: "RABBITMQ_EXCHANGE"
+          value: "clowder"
+        - name: "RABBITMQ_VHOST"
+          value: "%2F"
+        - name: "RABBITMQ_URI"
+          value: "amqp://guest:guest@192.168.3.153:5672/%2f"
+        - name: "RABBITMQ_MGMT_PORT"
+          value: "15672"
+        - name: "ELASTICSEARCH_SERVICE_CLUSTERNAME"
+          value: "myesdb"
+        - name: "ELASTICSEARCH_SERVICE_SERVER"
+          value: "192.168.3.2"
+        - name: "ELASTICSEARCH_SERVICE_PORT"
+          value: "9300"
+        - name: "UPDATE_MONGODB"
+          value: "true"
+        - name: "TOOLMANAGER_URI"
+          value: ""
         ports:
         - containerPort: 9000
         stdin: true
@@ -22,3 +50,4 @@ spec:
           limits:
             memory: "8192Mi"
             cpu: "4000m"
+        imagePullPolicy: Always

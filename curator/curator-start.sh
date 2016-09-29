@@ -36,7 +36,7 @@ function fix_conf() {
         fi
 
         mv /clowder/custom/custom.conf /clowder/custom/custom.conf.old
-        grep -v "^(${query})=" /clowder/custom/custom.conf.old > /clowder/custom/custom.conf
+        grep -v "^$query" /clowder/custom/custom.conf.old > /clowder/custom/custom.conf
         rm /clowder/custom/custom.conf.old
     fi
 
@@ -51,10 +51,8 @@ mkdir /clowder/conf/custom
 # Update configurations
 # admins
 if [ "$CLOWDER_ADMINS" == "" ]; then
-	fix_conf   "registerThroughAdmins" "false"
 	fix_conf   "initialAdmins" ""
 else
-	fix_conf   "registerThroughAdmins" "true"
 	fix_conf   "initialAdmins" "$CLOWDER_ADMINS"
 fi
 
@@ -89,4 +87,9 @@ fix_conf   "toolmanagerURI" "$TOOLMANAGER_URI"
 cd /clowder
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/clowder/
 cp /clowder/custom/* /clowder/conf/custom/
-./sbt -DMONGOUPDATE=1 'run'
+
+if [ "$UPDATE_MONGODB" == "true" ]; then
+	./sbt -DMONGOUPDATE=1 'run'
+else
+	./sbt 'run'
+fi
