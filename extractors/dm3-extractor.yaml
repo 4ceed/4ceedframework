@@ -16,5 +16,5 @@ spec:
         image: t2c2/dm3-extractor
         env:
         - name: "RABBITMQ_URL"
-          value: "192.168.3.153"
+          value: "10.0.0.44"
         imagePullPolicy: Always

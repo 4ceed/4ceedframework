@@ -15,4 +15,5 @@ spec:
   - name: transport
     port: 9300
     protocol: TCP
-  clusterIP: 192.168.3.2
+  # clusterIP: 192.168.3.2
+  clusterIP: 10.0.0.22

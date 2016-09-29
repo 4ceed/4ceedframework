@@ -10,4 +10,5 @@ spec:
       targetPort: 27017
   selector:
     name: mongo
-  clusterIP: 192.168.3.162
+  # clusterIP: 192.168.3.162
+  clusterIP: 10.0.0.33

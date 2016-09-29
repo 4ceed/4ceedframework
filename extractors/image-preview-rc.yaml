@@ -16,5 +16,5 @@ spec:
         image: t2c2/image-preview-extractor
         env:
         - name: "RABBITMQ_URL"
-          value: "amqp://guest:guest@192.168.3.153:5672/%2f"
+          value: "amqp://guest:guest@10.0.0.44:5672/%2f"
         imagePullPolicy: Always

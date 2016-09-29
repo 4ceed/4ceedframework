@@ -19,7 +19,7 @@ spec:
         - name: "CLOWDER_ADMINS"
           value: "pvnguye2@illinois.edu"
         - name: "MONGO_URI"
-          value: "mongodb://192.168.3.162:27017/clowder"
+          value: "mongodb://10.0.0.33:27017/clowder"
         - name: "SMTP_HOST"
           value: "express-smtp.cites.uiuc.edu"
         - name: "RABBITMQ_EXCHANGE"
@@ -27,13 +27,13 @@ spec:
         - name: "RABBITMQ_VHOST"
           value: "%2F"
         - name: "RABBITMQ_URI"
-          value: "amqp://guest:guest@192.168.3.153:5672/%2f"
+          value: "amqp://guest:guest@10.0.0.44:5672/%2f"
         - name: "RABBITMQ_MGMT_PORT"
           value: "15672"
         - name: "ELASTICSEARCH_SERVICE_CLUSTERNAME"
           value: "myesdb"
         - name: "ELASTICSEARCH_SERVICE_SERVER"
-          value: "192.168.3.2"
+          value: "10.0.0.22"
         - name: "ELASTICSEARCH_SERVICE_PORT"
           value: "9300"
         - name: "UPDATE_MONGODB"
@@ -43,11 +43,4 @@ spec:
         ports:
         - containerPort: 9000
         stdin: true
-        resources:
-          requests:
-            memory: "4096Mi"
-            cpu: "2000m"
-          limits:
-            memory: "8192Mi"
-            cpu: "4000m"
         imagePullPolicy: Always

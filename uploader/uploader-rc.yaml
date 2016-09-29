@@ -14,18 +14,11 @@ spec:
         image: t2c2/4ceeduploader
         env:
         - name: "CURATOR_HOME"
-          value: "http://192.17.237.26:32500/"
+          value: "http://192.168.99.100:32500/"
         - name: "CURATOR_API_URL"
-          value: "http://192.17.237.26:32500/api/"
+          value: "http://192.168.99.100:32500/api/"
         - name: "UPLOADER_HOME"
-          value: "http://192.17.237.26:32000/4ceeduploader/"
+          value: "http://192.168.99.100:32000/4ceeduploader/"
         ports:
         - containerPort: 8000
-        resources:
-          requests:
-            memory: "2048Mi"
-            cpu: "1000m"
-          limits:
-            memory: "4096Mi"
-            cpu: "2000m"
         imagePullPolicy: Always

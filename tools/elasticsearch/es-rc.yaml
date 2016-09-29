@@ -35,14 +35,12 @@ spec:
         - containerPort: 9300
           name: transport
           protocol: TCP
-        resources:
-          limits:
-            cpu: 500m
-            memory: 2048Mi
         volumeMounts:
-        - mountPath: "/data"
+        - mountPath: "/data/es"
           name: storage 
       volumes:
       - name: storage 
+        emptyDir: {}
+      - name: nfs-storage 
         hostPath:
           path: "/mnt/nfs/es-data"

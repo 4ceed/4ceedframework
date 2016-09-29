@@ -19,9 +19,11 @@ spec:
           containerPort: 27017
           hostPort: 27017
         volumeMounts:
-            - name: mongo-persistent-storage
+            - name: storage
               mountPath: "/data/db"
       volumes:
-        - name: mongo-persistent-storage
+        - name: storage
+          emptyDir: {}
+        - name: nfs-storage
           hostPath:
             path: "/mnt/nfs/mongodb" 
