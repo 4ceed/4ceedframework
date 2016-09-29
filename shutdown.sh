@@ -15,6 +15,13 @@ echo "Shutting down 4CeeD's curator..."
 $KUBECTL delete svc t2c2curatorsvc
 $KUBECTL delete rc t2c2curator
 
+# Extractors
+echo "Shutting down 4CeeD's extractors..."
+$KUBECTL delete rc dm3-extractor
+$KUBECTL delete rc image-preview-extractor
+$KUBECTL delete rc sem-extractor
+$KUBECTL delete rc xray-extractor
+
 # Setup tools
 echo "Shutting down 4CeeD's dependent tools..."
 $KUBECTL delete svc elasticsearch 

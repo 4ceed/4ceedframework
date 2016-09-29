@@ -25,3 +25,14 @@ echo 'Reconfig Uploader...'
 sed -e "s/\\\$CURATOR_IP/${CURATOR_IP}/g;"`
     `"s/\\\$UPLOADER_IP/${UPLOADER_IP}/g;" \
     "uploader/uploader-rc.yaml.sed" > uploader/uploader-rc.yaml
+
+echo 'Reconfig extractors...'
+sed -e "s/\\\$RABBITMQ_IP/${RABBITMQ_IP}/g;" \
+    "extractors/dm3-extractor.yaml.sed" > extractors/dm3-extractor.yaml
+sed -e "s/\\\$RABBITMQ_IP/${RABBITMQ_IP}/g;"`
+    `"s/\\\$CURATOR_IP/${CURATOR_IP}/g;" \
+    "extractors/sem-extractor.yaml.sed" > extractors/sem-extractor.yaml
+sed -e "s/\\\$RABBITMQ_IP/${RABBITMQ_IP}/g;" \
+    "extractors/xray-extractor.yaml.sed" > extractors/xray-extractor.yaml
+sed -e "s/\\\$RABBITMQ_IP/${RABBITMQ_IP}/g;" \
+    "extractors/image-preview-extractor.yaml.sed" > extractors/image-preview-extractor.yaml

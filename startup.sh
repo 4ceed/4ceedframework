@@ -15,6 +15,10 @@ echo "Deploying 4CeeD's curator..."
 cd ../curator 
 ./curator-deploy.sh $REBUILD_IMAGES
 
+# Setup extractors
+echo "Deploying 4CeeD's extractors..."
+cd ../extractors
+$KUBECTL create -f .
 
 # Setup 4CeeD's uploader 
 echo "Deploying 4CeeD's uploader..."
