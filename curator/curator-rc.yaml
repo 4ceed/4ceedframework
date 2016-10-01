@@ -22,6 +22,8 @@ spec:
           value: "mongodb://10.0.0.33:27017/clowder"
         - name: "SMTP_HOST"
           value: "express-smtp.cites.uiuc.edu"
+        - name: "UPLOADER_HOME"
+          value: "http://192.168.99.100:32000/4ceeduploader/"
         - name: "RABBITMQ_EXCHANGE"
           value: "clowder"
         - name: "RABBITMQ_VHOST"

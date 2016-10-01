@@ -16,6 +16,7 @@ sed -e "s/\\\$RABBITMQ_IP/${RABBITMQ_IP}/g;" \
 echo 'Reconfig Curator...'
 sed -e "s/\\\$ELASTICSEARCH_IP/${ELASTICSEARCH_IP}/g;"`
     `"s/\\\$MONGODB_IP/${MONGODB_IP}/g;"`
+    `"s/\\\$UPLOADER_IP/${UPLOADER_IP}/g;"`
     `"s/\\\$RABBITMQ_IP/${RABBITMQ_IP}/g;"`
     `"s/\\\$ADMIN_EMAIL/${ADMIN_EMAIL}/g;"`
     `"s/\\\$SMTP_SERVER/${SMTP_SERVER}/g;" \

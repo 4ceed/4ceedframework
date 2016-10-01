@@ -22,6 +22,8 @@ spec:
           value: "mongodb://$MONGODB_IP:27017/clowder"
         - name: "SMTP_HOST"
           value: "$SMTP_SERVER"
+        - name: "UPLOADER_HOME"
+          value: "http://$UPLOADER_IP:32000/4ceeduploader/"
         - name: "RABBITMQ_EXCHANGE"
           value: "clowder"
         - name: "RABBITMQ_VHOST"
