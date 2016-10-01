@@ -21,7 +21,8 @@ if [ "$BUILD_DOCKER_IMG" = "true" ]; then
 	docker push t2c2/4ceedcurator
 else
 	echo 'Using prebuilt Curator Docker image...'
-	# Deploy curator to Kubernetes:
-	$KUBECTL create -f curator-rc.yaml
-	$KUBECTL create -f curator-svc.yaml
 fi
+
+# Deploy curator to Kubernetes:
+$KUBECTL create -f curator-rc.yaml
+$KUBECTL create -f curator-svc.yaml

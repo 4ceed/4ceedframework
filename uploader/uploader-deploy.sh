@@ -10,7 +10,7 @@ fi
 if [ "$BUILD_DOCKER_IMG" = "true" ]; then
 	echo 'Building Uploader Docker image from source...'
 	# Clone the latest version of 4CeeD curator:
-	git clone https://bitbucket.org/todd_n/4ceeduploader.git
+	git clone git@bitbucket.org:smkctk/4ceeduploader.git
 
 	# Copy necessary files to 4ceedcurator folder:
 	cp Dockerfile 4ceeduploader/
@@ -20,7 +20,8 @@ if [ "$BUILD_DOCKER_IMG" = "true" ]; then
 	docker push t2c2/4ceeduploader
 else
 	echo 'Using prebuilt Uploader Docker image...'
-	# Deploy curator to Kubernetes:
-	$KUBECTL create -f uploader-rc.yaml
-	$KUBECTL create -f uploader-svc.yaml
 fi
+
+# Deploy curator to Kubernetes:
+$KUBECTL create -f uploader-rc.yaml
+$KUBECTL create -f uploader-svc.yaml
