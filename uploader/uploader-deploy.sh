@@ -1,5 +1,8 @@
 #!/bin/bash
 
+source ../custom.conf
+export KUBECLT
+
 if [ "$1" != "" ]; then
 	BUILD_DOCKER_IMG="$1"
 else
@@ -15,9 +18,8 @@ if [ "$BUILD_DOCKER_IMG" = "true" ]; then
 	# Copy necessary files to 4ceedcurator folder:
 	cp Dockerfile 4ceeduploader/
 
-	# Build 4CeeD curator Docker image and push to Docker Hub:
+	# Build 4CeeD curator Docker image:
 	docker build -t t2c2/4ceeduploader 4ceeduploader/
-	docker push t2c2/4ceeduploader
 else
 	echo 'Using prebuilt Uploader Docker image...'
 fi

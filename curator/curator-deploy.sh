@@ -1,5 +1,8 @@
 #!/bin/bash
 
+source ../custom.conf
+export KUBECTL
+
 if [ "$1" != "" ]; then
 	BUILD_DOCKER_IMG="$1"
 else
@@ -16,9 +19,8 @@ if [ "$BUILD_DOCKER_IMG" = "true" ]; then
 	cp Dockerfile curator-start.sh libjnotify64.so 4ceedcurator/
 	mv 4ceedcurator/libjnotify64.so 4ceedcurator/libjnotify.so
 
-	# Build 4CeeD curator Docker image and push to Docker Hub:
+	# Build 4CeeD curator Docker image:
 	docker build -t t2c2/4ceedcurator 4ceedcurator/
-	docker push t2c2/4ceedcurator
 else
 	echo 'Using prebuilt Curator Docker image...'
 fi
