@@ -2,6 +2,7 @@ apiVersion: v1
 kind: ReplicationController
 metadata:
   name: t2c2uploader 
+  namespace: 4ceed
 spec:
   replicas: 1
   template:

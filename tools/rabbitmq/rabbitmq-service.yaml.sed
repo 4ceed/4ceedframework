@@ -4,6 +4,7 @@ metadata:
   labels:
     component: rabbitmq
   name: rabbitmq-service
+  namespace: 4ceed
 spec:
   ports:
   - port: 5672

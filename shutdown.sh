@@ -4,6 +4,7 @@ source custom.conf
 
 # Setup environment variables
 export KUBECTL
+$KUBECTL delete namespace 4ceed
 
 # Shutdown 4CeeD's uploader 
 echo "Shutting down 4CeeD's uploader..."

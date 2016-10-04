@@ -4,6 +4,7 @@ source custom.conf
 
 # Setup environment variables
 export KUBECTL
+$KUBECTL create namespace 4ceed
 
 # Setup tools
 echo "Deploying 4CeeD's dependent tools..."

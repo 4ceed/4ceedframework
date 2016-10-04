@@ -26,7 +26,7 @@ Before starting 4CeeD services, modify `custom.conf` file to customize new your 
 Wait until all 4CeeD services start (this process can take a while since it will require downloading a bunch of Docker images from Docker Hub). To check the status of all services, use the following command and make sure that all pods have status `Running`:
 
 ```
-kubectl get pods
+kubectl get pods --namespace=4ceed
 ```
 
 When all servies have started, we can access 4CeeD Curator at `http://192.168.99.100:32500`, and 4CeeD Uploader at `http://192.168.99.100:32000/4ceeduploader/`. Please note that `192.168.99.100` is the default IP address of minikube node. To obtain this address, run `minikube ip`.

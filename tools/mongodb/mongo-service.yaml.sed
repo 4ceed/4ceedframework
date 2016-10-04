@@ -4,6 +4,7 @@ metadata:
   labels:
     name: mongo
   name: mongo
+  namespace: 4ceed
 spec:
   ports:
     - port: 27017

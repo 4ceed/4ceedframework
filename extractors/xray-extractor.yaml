@@ -2,6 +2,7 @@ apiVersion: v1
 kind: ReplicationController
 metadata:
   name: xray-extractor
+  namespace: 4ceed
 spec:
   replicas: 1
   selector:

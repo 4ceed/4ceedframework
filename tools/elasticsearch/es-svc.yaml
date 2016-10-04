@@ -4,6 +4,7 @@ metadata:
   name: elasticsearch
   labels:
     component: elasticsearch
+  namespace: 4ceed
 spec:
   type: LoadBalancer
   selector:

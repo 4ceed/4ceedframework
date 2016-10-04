@@ -4,6 +4,7 @@ metadata:
   name: t2c2uploadersvc 
   labels:
     app: t2c2uploadersvc 
+  namespace: 4ceed
 spec:
   type: NodePort
   ports:

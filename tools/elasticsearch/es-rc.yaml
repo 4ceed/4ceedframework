@@ -4,6 +4,7 @@ metadata:
   name: es
   labels:
     component: elasticsearch
+  namespace: 4ceed
 spec:
   replicas: 1
   selector:

@@ -2,6 +2,7 @@ apiVersion: v1
 kind: ReplicationController
 metadata:
   name: t2c2curator
+  namespace: 4ceed
 spec:
   replicas: 1
   template:

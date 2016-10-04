@@ -4,6 +4,7 @@ metadata:
   labels:
     component: rabbitmq
   name: rabbitmq-controller
+  namespace: 4ceed
 spec:
   replicas: 1
   template:

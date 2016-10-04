@@ -1,5 +1,8 @@
 #!/bin/bash
 
+source ../custom.conf
+export KUBECTL
+
 # Deploy RabbitMQ
 $KUBECTL create -f rabbitmq/rabbitmq-controller.yaml
 $KUBECTL create -f rabbitmq/rabbitmq-service.yaml

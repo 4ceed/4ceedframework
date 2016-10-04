@@ -4,6 +4,7 @@ metadata:
   labels:
     name: mongo
   name: mongo-controller
+  namespace: 4ceed
 spec:
   replicas: 1
   template:

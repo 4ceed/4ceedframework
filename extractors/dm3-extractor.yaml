@@ -2,6 +2,7 @@ apiVersion: v1
 kind: ReplicationController
 metadata:
   name: dm3-extractor
+  namespace: 4ceed
 spec:
   replicas: 1
   selector:

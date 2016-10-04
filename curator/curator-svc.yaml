@@ -4,6 +4,7 @@ metadata:
   name: t2c2curatorsvc 
   labels:
     app: t2c2curatorsvc 
+  namespace: 4ceed
 spec:
   type: NodePort
   ports:
