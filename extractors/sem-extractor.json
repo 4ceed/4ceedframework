@@ -1,0 +1,16 @@
+{
+    "name":"sem.metadata.extractor",
+    "version":"1.0",
+    "updated":"2016-01-01",
+    "description":"Image preview for SEM",
+    "author":"",
+    "contributors":[],
+    "contexts":[],
+    "repository": {
+        "repType":"git",
+        "repUrl":""
+    },
+    "external_services":[],
+    "libraries":[],
+    "bibtex":[]
+}
