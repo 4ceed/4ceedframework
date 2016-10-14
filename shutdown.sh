@@ -52,4 +52,6 @@ if [ "$TARGET" == "tools" ] || [ "$TARGET" == "all" ]; then
 fi
 
 # Delete namespace
-$KUBECTL delete namespace 4ceed
+if [ "$TARGET" == "all" ]; then
+	$KUBECTL delete namespace 4ceed
+fi

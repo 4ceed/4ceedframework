@@ -41,23 +41,6 @@ fi
 if [ "$TARGET" == "curator" ] || [ "$TARGET" == "all" ]; then
 	echo "Deploying 4CeeD's curator..."
 
-	if [ "$BUILD_DOCKER_IMG" = "true" ]; then
-		cd curator
-		echo 'Building Curator Docker image from source...'
-		# Clone the latest version of 4CeeD curator:
-		git clone https://bitbucket.org/todd_n/4ceedcurator.git
-
-		# Copy necessary files to 4ceedcurator folder:
-		cp Dockerfile curator-start.sh libjnotify64.so 4ceedcurator/
-		mv 4ceedcurator/libjnotify64.so 4ceedcurator/libjnotify.so
-
-		# Build 4CeeD curator Docker image:
-		docker build -t t2c2/4ceedcurator 4ceedcurator/
-		cd ..
-	else
-		echo 'Using prebuilt Curator Docker image...'
-	fi
-
 	# Deploy curator to Kubernetes:
 	$KUBECTL create -f curator/curator-rc.yaml
 	$KUBECTL create -f curator/curator-svc.yaml
@@ -73,21 +56,6 @@ fi
 # Setup 4CeeD's uploader 
 if [ "$TARGET" == "uploader" ] || [ "$TARGET" == "all" ]; then
 	echo "Deploying 4CeeD's uploader..."
-	if [ "$BUILD_DOCKER_IMG" = "true" ]; then
-		cd uploader
-		echo 'Building Uploader Docker image from source...'
-		# Clone the latest version of 4CeeD curator:
-		git clone git@bitbucket.org:smkctk/4ceeduploader.git
-
-		# Copy necessary files to 4ceedcurator folder:
-		cp Dockerfile 4ceeduploader/
-
-		# Build 4CeeD curator Docker image:
-		docker build -t t2c2/4ceeduploader 4ceeduploader/
-		cd ..
-	else
-		echo 'Using prebuilt Uploader Docker image...'
-	fi
 
 	# Deploy curator to Kubernetes:
 	$KUBECTL create -f uploader/uploader-rc.yaml
