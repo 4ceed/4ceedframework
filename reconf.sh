@@ -37,3 +37,5 @@ sed -e "s/\\\$RABBITMQ_IP/${RABBITMQ_IP}/g;" \
     "extractors/xray-extractor.yaml.sed" > extractors/xray-extractor.yaml
 sed -e "s/\\\$RABBITMQ_IP/${RABBITMQ_IP}/g;" \
     "extractors/image-preview-extractor.yaml.sed" > extractors/image-preview-extractor.yaml
+sed -e "s/\\\$RABBITMQ_IP/${RABBITMQ_IP}/g;" \
+    "extractors/afm-extractor.yaml.sed" > extractors/afm-extractor.yaml

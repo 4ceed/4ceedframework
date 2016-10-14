@@ -19,21 +19,30 @@ fi
 
 # Shutdown 4CeeD's uploader 
 if [ "$TARGET" == "uploader" ] || [ "$TARGET" == "all" ]; then
-	echo "Shutting down 4CeeD's uploader..."
+    echo
+	echo "========Shutting down 4CeeD's uploader...========"
+	echo 
+
 	$KUBECTL delete svc t2c2uploadersvc --namespace=4ceed
 	$KUBECTL delete rc t2c2uploader --namespace=4ceed
 fi
 
 # Shutdown 4CeeD's curator 
 if [ "$TARGET" == "curator" ] || [ "$TARGET" == "all" ]; then
-	echo "Shutting down 4CeeD's curator..."
+    echo
+	echo "========Shutting down 4CeeD's curator...========"
+	echo 
+
 	$KUBECTL delete svc t2c2curatorsvc --namespace=4ceed
 	$KUBECTL delete rc t2c2curator --namespace=4ceed
 fi
 
 # Extractors
 if [ "$TARGET" == "extractors" ] || [ "$TARGET" == "all" ]; then
-	echo "Shutting down 4CeeD's extractors..."
+    echo
+	echo "========Shutting down 4CeeD's extractors...========"
+	echo
+
 	$KUBECTL delete rc dm3-extractor --namespace=4ceed
 	$KUBECTL delete rc image-preview-extractor --namespace=4ceed
 	$KUBECTL delete rc sem-extractor --namespace=4ceed
@@ -42,7 +51,10 @@ fi
 
 # Setup tools
 if [ "$TARGET" == "tools" ] || [ "$TARGET" == "all" ]; then
-	echo "Shutting down 4CeeD's dependent tools..."
+    echo 
+	echo "========Shutting down 4CeeD's dependent tools...========"
+	echo
+
 	$KUBECTL delete svc elasticsearch --namespace=4ceed
 	$KUBECTL delete rc es --namespace=4ceed
 	$KUBECTL delete svc mongo --namespace=4ceed
