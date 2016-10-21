@@ -4,21 +4,17 @@
 source custom.conf
 export KUBECTL
 
+# Get startup target
+if [ "$1" == "all" ] || [ "$1" == "tools" ] || [ "$1" == "extractors" ] || \
+   [ "$1" == "curator" ] || [ "$1" == "uploader" ]; then
+	TARGET="$1"
+else
+	echo 'Invalid startup target (all|tools|extractors|curator|uploader).'
+	exit 1
+fi
+
 # Create 4ceed namespace
 $KUBECTL create namespace 4ceed
-
-# Get startup target
-if [ "$1" != "" ]; then
-	if [ "$1" != "all" ] && [ "$1" != "tools" ] && [ "$1" != "extractors" ] && \
-	   [ "$1" != "curator" ] && [ "$1" != "uploader" ]; then
-		echo 'Invalid startup target (all|tools|extractors|curator|uploader).'
-		exit 1
-	else
-		TARGET="$1"
-	fi
-else
-    TARGET="all"
-fi
 
 # Setup tools
 if [ "$TARGET" == "tools" ] || [ "$TARGET" == "all" ]; then

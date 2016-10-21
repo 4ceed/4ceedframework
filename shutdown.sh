@@ -5,16 +5,12 @@ source custom.conf
 export KUBECTL
 
 # Get shutdown target
-if [ "$1" != "" ]; then
-	if [ "$1" != "all" ] && [ "$1" != "tools" ] && [ "$1" != "extractors" ] && \
-	   [ "$1" != "curator" ] && [ "$1" != "uploader" ]; then
-		echo 'Invalid shutdown target (all|tools|extractors|curator|uploader).'
-		exit 1
-	else
-		TARGET="$1"
-	fi
+if [ "$1" == "all" ] || [ "$1" == "tools" ] || [ "$1" == "extractors" ] || \
+   [ "$1" == "curator" ] || [ "$1" == "uploader" ]; then
+	TARGET="$1"
 else
-    TARGET="all"
+	echo 'Invalid startup target (all|tools|extractors|curator|uploader).'
+	exit 1
 fi
 
 # Shutdown 4CeeD's uploader 
@@ -44,6 +40,7 @@ if [ "$TARGET" == "extractors" ] || [ "$TARGET" == "all" ]; then
 	echo
 
 	$KUBECTL delete rc dm3-extractor --namespace=4ceed
+	$KUBECTL delete rc afm-extractor --namespace=4ceed
 	$KUBECTL delete rc image-preview-extractor --namespace=4ceed
 	$KUBECTL delete rc sem-extractor --namespace=4ceed
 	$KUBECTL delete rc xray-extractor --namespace=4ceed
