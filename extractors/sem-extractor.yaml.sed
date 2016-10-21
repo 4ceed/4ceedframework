@@ -19,7 +19,7 @@ spec:
         - name: "RABBITMQ_URL"
           value: "$RABBITMQ_IP"
         - name: "CLOWDER_URL"
-          value: "$CURATOR_IP"
+          value: "$CURATOR_ADDR"
         - name: "CLOWDER_PORT"
           value: "32500"
         - name: "CRED_NAME"

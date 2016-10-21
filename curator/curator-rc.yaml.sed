@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
       - name: t2c2curator
-        image: t2c2/4ceedcurator
+        image: t2c2/4ceedcurator:16.10.2
         env:
         # Environmental variables for container
         - name: "CLOWDER_CONTEXT"
@@ -24,7 +24,7 @@ spec:
         - name: "SMTP_HOST"
           value: "$SMTP_SERVER"
         - name: "UPLOADER_HOME"
-          value: "http://$UPLOADER_IP:32000/4ceeduploader/"
+          value: "$UPLOADER_ADDR"
         - name: "RABBITMQ_EXCHANGE"
           value: "clowder"
         - name: "RABBITMQ_VHOST"

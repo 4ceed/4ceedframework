@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
       - name: t2c2uploader 
-        image: t2c2/4ceeduploader
+        image: t2c2/4ceeduploader:16.10.2
         env:
         - name: "CURATOR_HOME"
           value: "http://192.168.99.100:32500/"

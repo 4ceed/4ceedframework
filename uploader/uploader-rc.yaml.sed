@@ -12,14 +12,14 @@ spec:
     spec:
       containers:
       - name: t2c2uploader 
-        image: t2c2/4ceeduploader
+        image: t2c2/4ceeduploader:16.10.2
         env:
         - name: "CURATOR_HOME"
-          value: "http://$CURATOR_IP:32500/"
+          value: "$CURATOR_ADDR/"
         - name: "CURATOR_API_URL"
-          value: "http://$CURATOR_IP:32500/api/"
+          value: "$CURATOR_ADDR/api/"
         - name: "UPLOADER_HOME"
-          value: "http://$UPLOADER_IP:32000/4ceeduploader/"
+          value: "$UPLOADER_ADDR"
         ports:
         - containerPort: 8000
         imagePullPolicy: Always

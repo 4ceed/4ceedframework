@@ -20,8 +20,8 @@ spec:
           containerPort: 27017
           hostPort: 27017
         volumeMounts:
-            - name: storage
-              mountPath: "/data/db"
+        - name: storage
+          mountPath: "/data/db"
       volumes:
         - name: storage
           emptyDir: {}

@@ -1,37 +1,37 @@
 #!/bin/bash
 source custom.conf
 
-echo 'Reconfig Elasticsearch...'
+echo 'Reconfigure Elasticsearch...'
 sed -e "s/\\\$ELASTICSEARCH_IP/${ELASTICSEARCH_IP}/g;" \
     "tools/elasticsearch/es-svc.yaml.sed" > tools/elasticsearch/es-svc.yaml
 
-echo 'Reconfig MongoDB...'
+echo 'Reconfigure MongoDB...'
 sed -e "s/\\\$MONGODB_IP/${MONGODB_IP}/g;" \
     "tools/mongodb/mongo-service.yaml.sed" > tools/mongodb/mongo-service.yaml
 
-echo 'Reconfig RabbitMQ...'
+echo 'Reconfigure RabbitMQ...'
 sed -e "s/\\\$RABBITMQ_IP/${RABBITMQ_IP}/g;" \
     "tools/rabbitmq/rabbitmq-service.yaml.sed" > tools/rabbitmq/rabbitmq-service.yaml
 
-echo 'Reconfig Curator...'
+echo 'Reconfigure Curator...'
 sed -e "s/\\\$ELASTICSEARCH_IP/${ELASTICSEARCH_IP}/g;"`
     `"s/\\\$MONGODB_IP/${MONGODB_IP}/g;"`
-    `"s/\\\$UPLOADER_IP/${UPLOADER_IP}/g;"`
+    `"s~\\\$UPLOADER_ADDR~${UPLOADER_ADDR}~g;"`
     `"s/\\\$RABBITMQ_IP/${RABBITMQ_IP}/g;"`
     `"s/\\\$ADMIN_EMAIL/${ADMIN_EMAIL}/g;"`
     `"s/\\\$SMTP_SERVER/${SMTP_SERVER}/g;" \
     "curator/curator-rc.yaml.sed" > curator/curator-rc.yaml
 
-echo 'Reconfig Uploader...'
-sed -e "s/\\\$CURATOR_IP/${CURATOR_IP}/g;"`
-    `"s/\\\$UPLOADER_IP/${UPLOADER_IP}/g;" \
+echo 'Reconfigure Uploader...'
+sed -e "s~\\\$CURATOR_ADDR~${CURATOR_ADDR}~g;"`
+    `"s~\\\$UPLOADER_ADDR~${UPLOADER_ADDR}~g;" \
     "uploader/uploader-rc.yaml.sed" > uploader/uploader-rc.yaml
 
-echo 'Reconfig extractors...'
+echo 'Reconfigure Extractors...'
 sed -e "s/\\\$RABBITMQ_IP/${RABBITMQ_IP}/g;" \
     "extractors/dm3-extractor.yaml.sed" > extractors/dm3-extractor.yaml
 sed -e "s/\\\$RABBITMQ_IP/${RABBITMQ_IP}/g;"`
-    `"s/\\\$CURATOR_IP/${CURATOR_IP}/g;" \
+    `"s~\\\$CURATOR_ADDR~${CURATOR_ADDR}~g;" \
     "extractors/sem-extractor.yaml.sed" > extractors/sem-extractor.yaml
 sed -e "s/\\\$RABBITMQ_IP/${RABBITMQ_IP}/g;" \
     "extractors/xray-extractor.yaml.sed" > extractors/xray-extractor.yaml
