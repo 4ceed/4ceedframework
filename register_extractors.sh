@@ -11,5 +11,5 @@ for extractor_file in $(find extractors/ -name '*.json'); do
         -H "Content-Type: application/json" \
         -d "${extractor_info}" \
         -u $ADMIN_EMAIL \
-        "http://${CURATOR_IP}:32500/api/extractors"
+        "${CURATOR_ADDR}/api/extractors"
 done
