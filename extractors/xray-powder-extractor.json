@@ -1,0 +1,16 @@
+{
+    "name":"xray-powder-extractor",
+    "version":"1.0",
+    "updated":"2016-01-01",
+    "description":"Extractor for saxs xray files",
+    "author":"",
+    "contributors":[],
+    "contexts":[],
+    "repository": {
+        "repType":"git",
+        "repUrl":""
+    },
+    "external_services":[],
+    "libraries":[],
+    "bibtex":[]
+}
