@@ -44,8 +44,11 @@ To stop all services, run the following command:
 ```
 
 ## Next Steps
-- [Upgrade 4CeeD components](docs/upgrade.md) 
 - [Setup 4CeeD on baremetal cluster](docs/setup_baremetal.md) 
+- [Register extractors](docs/register_extractors.md) 
+- [Run 4CeeD in persistent mode](docs/persistent_mode.md) 
+- [Access 4CeeD via domain name](docs/domain_name.md) 
+- [Upgrade 4CeeD components](docs/upgrade.md) 
 
 
 ## Contact
