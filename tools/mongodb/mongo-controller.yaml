@@ -20,8 +20,15 @@ spec:
           containerPort: 27017
           hostPort: 27017
         volumeMounts:
-        - name: storage
+        - name: nfs-storage
           mountPath: "/data/db"
+        resources:
+          requests:
+            memory: "4096Mi"
+            cpu: "1000m"
+          limits:
+            memory: "8192Mi"
+            cpu: "2000m"
       volumes:
         - name: storage
           emptyDir: {}

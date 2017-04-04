@@ -18,3 +18,11 @@ spec:
         name: rabbitmq
         ports:
         - containerPort: 5672
+        - containerPort: 15672
+        resources:
+          requests:
+            memory: "2048Mi"
+            cpu: "1000m"
+          limits:
+            memory: "4096Mi"
+            cpu: "2000m"

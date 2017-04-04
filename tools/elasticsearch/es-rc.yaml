@@ -38,10 +38,10 @@ spec:
           protocol: TCP
         volumeMounts:
         - mountPath: "/data/es"
-          name: storage 
+          name: nfs-storage 
       volumes:
       - name: storage 
         emptyDir: {}
       - name: nfs-storage 
         hostPath:
-          path: "/mnt/nfs/es-data"
+          path: "/home/phuong/4ceed/gluster/4ceed/es-data"
