@@ -45,6 +45,7 @@ if [ "$TARGET" == "extractors" ] || [ "$TARGET" == "all" ]; then
 	$KUBECTL delete rc sem-extractor --namespace=4ceed
 	$KUBECTL delete rc xray-extractor --namespace=4ceed
 	$KUBECTL delete rc xray-powder-extractor --namespace=4ceed
+	$KUBECTL delete rc zip-extractor --namespace=4ceed
 fi
 
 # Setup tools

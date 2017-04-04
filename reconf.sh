@@ -41,3 +41,6 @@ sed -e "s/\\\$RABBITMQ_IP/${RABBITMQ_IP}/g;" \
     "extractors/image-preview-extractor.yaml.sed" > extractors/image-preview-extractor.yaml
 sed -e "s/\\\$RABBITMQ_IP/${RABBITMQ_IP}/g;" \
     "extractors/afm-extractor.yaml.sed" > extractors/afm-extractor.yaml
+sed -e "s/\\\$RABBITMQ_IP/${RABBITMQ_IP}/g;"`
+    `"s~\\\$CURATOR_ADDR~${CURATOR_ADDR}~g;" \
+    "extractors/zip-extractor.yaml.sed" > extractors/zip-extractor.yaml

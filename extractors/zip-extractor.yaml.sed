@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: zip-extractor
+  namespace: 4ceed
+spec:
+  replicas: 1
+  selector:
+    app: zip-extractor 
+  template:
+    metadata:
+      labels:
+        app: zip-extractor 
+    spec:
+      containers:
+      - name: zip-extractor
+        image: t2c2/zip-extractor
+        env:
+        - name: "RABBITMQ_URL"
+          value: "amqp://guest:guest@$RABBITMQ_IP:5672/%2f"
+        - name: "CLOWDER_URL"
+          value: "$CURATOR_ADDR"
+        - name: "CLOWDER_PORT"
+          value: "32500"
+        - name: "CRED_NAME"
+          value: "guest"
+        - name: "CRED_PASS"
+          value: "guest"
+        - name: "SERVER_KEY"
+          value: "phuong-test"
+        - name: "EXCHANGE_NAME"
+          value: "clowder"
+        - name: "USE_SSL"
+          value: "false"
+        - name: "MESSAGE_TYPE"
+          value: "*.zip.collection.create.#"
+        imagePullPolicy: Always

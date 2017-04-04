@@ -1,0 +1,16 @@
+{
+    "name":"zip.extractor",
+    "version":"1.0",
+    "updated":"2017-02-20",
+    "description":"extractor for zip file to create collection",
+    "author":"",
+    "contributors":[],
+    "contexts":[],
+    "repository": {
+        "repType":"git",
+        "repUrl":""
+    },
+    "external_services":[],
+    "libraries":[],
+    "bibtex":[]
+}
