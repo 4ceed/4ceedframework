@@ -6,10 +6,10 @@ export KUBECTL
 
 # Get startup target
 if [ "$1" == "all" ] || [ "$1" == "tools" ] || [ "$1" == "extractors" ] || \
-   [ "$1" == "curator" ] || [ "$1" == "uploader" ]; then
+   [ "$1" == "curator" ] ; then
 	TARGET="$1"
 else
-	echo 'Invalid startup target (all|tools|extractors|curator|uploader).'
+	echo 'Invalid startup target (all|tools|extractors|curator).'
 	exit 1
 fi
 
@@ -65,15 +65,4 @@ if [ "$TARGET" == "extractors" ] || [ "$TARGET" == "all" ]; then
 	$KUBECTL create -f extractors/afm-extractor.yaml
 	$KUBECTL create -f extractors/zip-extractor.yaml
 	sleep 5
-fi
-
-# Setup 4CeeD's uploader 
-if [ "$TARGET" == "uploader" ] || [ "$TARGET" == "all" ]; then
-    echo
-	echo "========Deploying 4CeeD's uploader...========"
-	echo
-
-	# Deploy curator to Kubernetes:
-	$KUBECTL create -f uploader/uploader-rc.yaml
-	$KUBECTL create -f uploader/uploader-svc.yaml
 fi

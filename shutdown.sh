@@ -6,21 +6,11 @@ export KUBECTL
 
 # Get shutdown target
 if [ "$1" == "all" ] || [ "$1" == "tools" ] || [ "$1" == "extractors" ] || \
-   [ "$1" == "curator" ] || [ "$1" == "uploader" ]; then
+   [ "$1" == "curator" ]; then
 	TARGET="$1"
 else
-	echo 'Invalid startup target (all|tools|extractors|curator|uploader).'
+	echo 'Invalid startup target (all|tools|extractors|curator).'
 	exit 1
-fi
-
-# Shutdown 4CeeD's uploader 
-if [ "$TARGET" == "uploader" ] || [ "$TARGET" == "all" ]; then
-    echo
-	echo "========Shutting down 4CeeD's uploader...========"
-	echo 
-
-	$KUBECTL delete svc t2c2uploadersvc --namespace=4ceed
-	$KUBECTL delete rc t2c2uploader --namespace=4ceed
 fi
 
 # Shutdown 4CeeD's curator 
