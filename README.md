@@ -33,7 +33,7 @@ kubectl get pods --namespace=4ceed
 ```
 
 ### Access 4CeeD
-When all servies have started, we can access 4CeeD Curator at `http://192.168.99.100:32500`, and 4CeeD Uploader at `http://192.168.99.100:32000/4ceeduploader/`. Please note that `192.168.99.100` is the default IP address of minikube node. To obtain this address, run `minikube ip`.
+When all servies have started, we can access 4CeeD at `http://192.168.99.100:32500`. Please note that `192.168.99.100` is the default IP address of minikube node. To obtain this address, run `minikube ip`.
 
 Please note that the first user that can sign-up to the system has to be the user with email in `ADMIN_EMAIL`.
 
