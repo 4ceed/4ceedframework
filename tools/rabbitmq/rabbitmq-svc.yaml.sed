@@ -3,7 +3,7 @@ kind: Service
 metadata:
   labels:
     component: rabbitmq
-  name: rabbitmq-service
+  name: rabbitmq
   namespace: 4ceed
 spec:
   ports:
@@ -11,4 +11,4 @@ spec:
   selector:
     app: taskQueue
     component: rabbitmq
-  clusterIP: 10.0.0.44
+  clusterIP: $RABBITMQ_IP

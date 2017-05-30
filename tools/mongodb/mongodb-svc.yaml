@@ -3,7 +3,7 @@ kind: Service
 metadata:
   labels:
     name: mongo
-  name: mongo
+  name: mongodb
   namespace: 4ceed
 spec:
   ports:

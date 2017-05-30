@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ReplicationController
 metadata:
-  name: es
+  name: elasticsearch-controller
   labels:
     component: elasticsearch
   namespace: 4ceed
@@ -38,10 +38,10 @@ spec:
           protocol: TCP
         volumeMounts:
         - mountPath: "/data/es"
-          name: nfs-storage 
+          name: temporary-storage 
       volumes:
-      - name: storage 
+      - name: temporary-storage 
         emptyDir: {}
-      - name: nfs-storage 
+      - name: persistent-storage 
         hostPath:
-          path: "/home/phuong/4ceed/gluster/4ceed/es-data"
+          path: "/mnt/nfs/es-data"
