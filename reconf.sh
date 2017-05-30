@@ -3,15 +3,15 @@ source custom.conf
 
 echo 'Reconfigure Elasticsearch...'
 sed -e "s/\\\$ELASTICSEARCH_IP/${ELASTICSEARCH_IP}/g;" \
-    "tools/elasticsearch/es-svc.yaml.sed" > tools/elasticsearch/es-svc.yaml
+    "tools/elasticsearch/elasticsearch-svc.yaml.sed" > tools/elasticsearch/elasticsearch-svc.yaml
 
 echo 'Reconfigure MongoDB...'
 sed -e "s/\\\$MONGODB_IP/${MONGODB_IP}/g;" \
-    "tools/mongodb/mongo-service.yaml.sed" > tools/mongodb/mongo-service.yaml
+    "tools/mongodb/mongodb-svc.yaml.sed" > tools/mongodb/mongodb-svc.yaml
 
 echo 'Reconfigure RabbitMQ...'
 sed -e "s/\\\$RABBITMQ_IP/${RABBITMQ_IP}/g;" \
-    "tools/rabbitmq/rabbitmq-service.yaml.sed" > tools/rabbitmq/rabbitmq-service.yaml
+    "tools/rabbitmq/rabbitmq-svc.yaml.sed" > tools/rabbitmq/rabbitmq-svc.yaml
 
 echo 'Reconfigure Curator...'
 sed -e "s/\\\$ELASTICSEARCH_IP/${ELASTICSEARCH_IP}/g;"`

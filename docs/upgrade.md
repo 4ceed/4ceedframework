@@ -9,7 +9,7 @@ You can upgrade 4CeeD's components individually by simply pointing to a new vers
 ```
 - Update the version of Curator's Docker image by modifying the file `curator/curator-rc.yaml` and change the `VERSION_NUMBER` in following line to the new version of the image:
 ```
-image: t2c2/4ceeduploader:VERSION_NUMBER
+image: t2c2/4ceedcurator:VERSION_NUMBER
 ```
 - Then, start the new Curator:
 ```

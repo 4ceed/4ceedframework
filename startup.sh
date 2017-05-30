@@ -22,19 +22,19 @@ if [ "$TARGET" == "tools" ] || [ "$TARGET" == "all" ]; then
 	echo "========Deploying 4CeeD's dependent tools...========"
 	echo
 	# Deploy RabbitMQ
-	$KUBECTL create -f tools/rabbitmq/rabbitmq-controller.yaml
-	$KUBECTL create -f tools/rabbitmq/rabbitmq-service.yaml
+	$KUBECTL create -f tools/rabbitmq/rabbitmq-rc.yaml
+	$KUBECTL create -f tools/rabbitmq/rabbitmq-svc.yaml
 	sleep 5
 
 	# Deploy MongoDB 
-	$KUBECTL create -f tools/mongodb/mongo-controller.yaml
-	$KUBECTL create -f tools/mongodb/mongo-service.yaml
+	$KUBECTL create -f tools/mongodb/mongodb-rc.yaml
+	$KUBECTL create -f tools/mongodb/mongodb-svc.yaml
 	sleep 5
 
 	# Deploy Elasticsearch 
 	$KUBECTL create -f tools/elasticsearch/service-account.yaml
-	$KUBECTL create -f tools/elasticsearch/es-rc.yaml
-	$KUBECTL create -f tools/elasticsearch/es-svc.yaml 
+	$KUBECTL create -f tools/elasticsearch/elasticsearch-rc.yaml
+	$KUBECTL create -f tools/elasticsearch/elasticsearch-svc.yaml 
 	sleep 5
 fi
 

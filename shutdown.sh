@@ -45,10 +45,10 @@ if [ "$TARGET" == "tools" ] || [ "$TARGET" == "all" ]; then
 	echo
 
 	$KUBECTL delete svc elasticsearch --namespace=4ceed
-	$KUBECTL delete rc es --namespace=4ceed
-	$KUBECTL delete svc mongo --namespace=4ceed
-	$KUBECTL delete rc mongo-controller --namespace=4ceed
-	$KUBECTL delete svc rabbitmq-service --namespace=4ceed
+	$KUBECTL delete rc elasticsearch-controller --namespace=4ceed
+	$KUBECTL delete svc mongodb --namespace=4ceed
+	$KUBECTL delete rc mongodb-controller --namespace=4ceed
+	$KUBECTL delete svc rabbitmq --namespace=4ceed
 	$KUBECTL delete rc rabbitmq-controller --namespace=4ceed
 fi
 
