@@ -1,7 +1,9 @@
 Setup 4CeeD on Baremetal Cluster 
 ====
 
-This guide is recommended for more advanced users with Linux and cluster setup experience.
+*Disclaimer*: This is the recommended way to setup 4CeeD. This setup requires advanced users with Linux and cluster setup experience.
+
+We have tested Kubernetes with the following configurations: `KUBE_VERSION=1.3.7`, `FLANNEL_VERSION=0.5.5`, and `ETCD_VERSION=2.3.1`. Tested version of Docker is `1.9.1` or later. Make sure you setup Kubernetes with the right set of components. 
 
 First, you will need to have Kubernetes setup on a baremetal cluster. Pick your own solution [here](http://kubernetes.io/docs/getting-started-guides/#bare-metal) (we have tested on [Ubuntu](http://kubernetes.io/docs/getting-started-guides/ubuntu/) cluster). 
 
