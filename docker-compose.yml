@@ -1,0 +1,122 @@
+# 4CeeD framework 
+4ceed:
+  image: t2c2/4ceedcurator:17.04 
+  environment:
+    CLOWDER_CONTEXT: "/"
+    CLOWDER_ADMINS: "pvnguye2@illinois.edu"
+    MONGO_URI: "mongodb://mongodb:27017/clowder"
+    SMTP_HOST: "express-smtp.cites.uiuc.edu"
+    RABBITMQ_EXCHANGE: "clowder"
+    RABBITMQ_VHOST: "%2F"
+    RABBITMQ_URI: "amqp://guest:guest@rabbitmq:5672/%2f"
+    RABBITMQ_MGMT_PORT: "15672"
+    ELASTICSEARCH_SERVICE_CLUSTERNAME: "myesdb"
+    ELASTICSEARCH_SERVICE_SERVER: "elasticsearch"
+    ELASTICSEARCH_SERVICE_PORT: "9300"
+    UPDATE_MONGODB: "true"
+    TOOLMANAGER_URI: ""
+  ports:
+    - "9000:9000"
+  stdin_open: true
+  tty: true
+  links:
+    - mongodb
+    - rabbitmq
+    - elasticsearch
+
+# Extractors
+# afm-extractor:
+#   image: t2c2/afm-extractor 
+#   environment:
+#     RABBITMQ_URL: "amqp://guest:guest@rabbitmq:5672/%2f"
+#   stdin_open: true
+#   tty: true
+#   links:
+#     - rabbitmq
+#
+# dm3-extractor:
+#   image: t2c2/dm3-extractor 
+#   environment:
+#     RABBITMQ_URL: "rabbitmq"
+#   links:
+#     - rabbitmq
+# 
+# image-preview-extractor:
+#   image: t2c2/image-preview-extractor 
+#   environment:
+#     RABBITMQ_URL: "amqp://guest:guest@rabbitmq:5672/%2f"
+#   links:
+#     - rabbitmq
+# 
+# xray-extractor:
+#   image: t2c2/xray-extractor 
+#   environment:
+#     RABBITMQ_URL: "amqp://guest:guest@rabbitmq:5672/%2f"
+#   links:
+#     - rabbitmq
+# 
+# xray-powder-extractor:
+#   image: t2c2/xray-powder-extractor 
+#   environment:
+#     RABBITMQ_URL: "amqp://guest:guest@rabbitmq:5672/%2f"
+#   links:
+#     - rabbitmq
+# 
+# zip-extractor:
+#   image: t2c2/zip-extractor 
+#   environment:
+#     RABBITMQ_URL: "amqp://guest:guest@rabbitmq:5672/%2f"
+#     CLOWDER_URL: "http://4ceed:9000"
+#     CLOWDER_PORT: "9000"
+#     CRED_NAME: "guest"
+#     CRED_PASS: "guest"
+#     SERVER_KEY: "phuong-test"
+#     EXCHANGE_NAME: "clowder"
+#     USE_SSL: "false"
+#     MESSAGE_TYPE: "*.zip.collection.create.#"
+#   links:
+#     - rabbitmq
+#     - 4ceed
+# 
+# sem-extractor:
+#   image: t2c2/sem-extractor 
+#   environment:
+#     RABBITMQ_URL: "rabbitmq"
+#     CLOWDER_URL: "http://4ceed:9000"
+#     CLOWDER_PORT: "9000"
+#     CRED_NAME: "guest"
+#     CRED_PASS: "guest"
+#     SERVER_KEY: "phuong-test"
+#     EXCHANGE_NAME: "clowder"
+#     USE_SSL: "false"
+#     MESSAGE_TYPE: "*.dataset.file.added"
+#   links:
+#     - rabbitmq
+#     - 4ceed
+
+# Mongodb database used to store metadata/data
+mongodb:
+  image: mongo:3.2.1
+  ports:
+    - "27017:27017"
+  # volumes:
+  #   - clowder/mongo:/data/db
+
+# rabbitmq to connect to extractors
+rabbitmq:
+  image: rabbitmq
+  ports:
+    - "5672:5672"
+    - "15672:15672"
+  # volumes:
+  #   - clowder/rabbitmq:/var/lib/rabbitmq
+
+# elasticsearch to allow indexing
+elasticsearch:
+    image: elasticsearch:2
+    command: elasticsearch -Des.cluster.name="myesdb"
+    ports:
+        - "9200:9200"
+        - "9300:9300"
+    # volumes:
+    #     - ${PWD}/esdata:/usr/share/elasticsearch/data

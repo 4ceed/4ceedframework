@@ -7,7 +7,7 @@ This repository consists of a collections of deployment scripts for various tool
 
 ## Setup
 - [minikube](docs/minikube_setup.md): The most simple way to setup 4CeeD. Recommended for a quick test of 4CeeD functionalities.
-- [Docker](docs/docker_setup.md): Setup 4CeeD as a group of Docker containers running on a single machine.
+- [docker-compose](docs/docker_setup.md): Setup 4CeeD as a group of Docker containers running on a single machine.
 - [Kubernetes](docs/kubernetes_setup.md): Setup 4CeeD on a Kubernetes cluster. Our recommended way to setup 4CeeD.
 - [Google Cloud Platform](docs/gcp_setup.md): Setup 4CeeD on using Google Cloud Platform's Container Engine. 
 
