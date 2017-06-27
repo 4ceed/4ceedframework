@@ -10,7 +10,7 @@ After installing minikube, start a minikube cluster:
 minikube start
 ```
 
-Before starting 4CeeD services, modify `custom.conf` file to customize new your 4CeeD instance. For the quick start with minikube, you only need to modify `ADMIN_EMAIL` and `SMTP_SERVER` to update your own orignazation information. Please note that `SMTP_SERVER` needs to be a valid SMTP server so that registration verification emails can be sent when users sign-up.
+Before starting 4CeeD services, modify `custom.conf` file to customize new your 4CeeD instance. For the quick start with minikube, you only need to modify `ADMIN_EMAIL` (and `SMTP_SERVER`, if email verification is required) to update your own information.
 
 After that, run `./reconf.sh` to refresh the configuration. Then, start all 4CeeD services by running the following command:
 ```

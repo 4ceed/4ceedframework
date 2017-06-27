@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
       - name: t2c2curator
-        image: t2c2/4ceedcurator:17.04
+        image: t2c2/4ceedcurator:17.06.2
         env:
         # Environmental variables for container
         - name: "CLOWDER_CONTEXT"
