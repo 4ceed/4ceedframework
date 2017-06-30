@@ -17,7 +17,7 @@ spec:
         image: t2c2/sem-extractor
         env:
         - name: "RABBITMQ_URL"
-          value: "$RABBITMQ_IP"
+          value: "rabbitmq"
         - name: "CLOWDER_URL"
           value: "$CURATOR_ADDR"
         - name: "CLOWDER_PORT"

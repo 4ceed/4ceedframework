@@ -17,7 +17,7 @@ spec:
         image: t2c2/zip-extractor
         env:
         - name: "RABBITMQ_URL"
-          value: "amqp://guest:guest@$RABBITMQ_IP:5672/%2f"
+          value: "amqp://guest:guest@rabbitmq:5672/%2f"
         - name: "CLOWDER_URL"
           value: "$CURATOR_ADDR"
         - name: "CLOWDER_PORT"
