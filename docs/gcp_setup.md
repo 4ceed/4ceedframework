@@ -22,16 +22,6 @@ Then, open the Kubernetes's Dashboard interface by navigating to the following l
 
 ## Configure 4CeeD to run on GCP
 
-- Since each GCP cluster has its own IP address range, we need to update the IP addresses of 4CeeD services (located in `custom.conf` file) to be compatible with the new GCP cluster’s IP range.
-
-For example, if the cluster has the IP range of `10.4.0.0/14`, we can set the IP addresses of 4CeeD services as follow:
-
-```
-ELASTICSEARCH_IP=10.7.255.22
-MONGODB_IP=10.7.255.33
-RABBITMQ_IP=10.7.255.44
-```
-
 - Configure admin email address `ADMIN_EMAIL` (and SMTP server address `SMTP_SERVER`, in case email verification is required) in `custom.conf`.
 
 - Setup new [static external IP address](https://cloud.google.com/compute/docs/configure-ip-addresses#before-you-begin) on GCP and assign the static IP to a running VM instance in the cluster

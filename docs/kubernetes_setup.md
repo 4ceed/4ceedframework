@@ -14,7 +14,6 @@ To setup Kubernetes on other operating systems, pick your own Kubernetes deploym
 Next, update configuration in `custom.conf` according to your Kubernetes setup:
 
 * `KUBECTL`: Path to `kubectl` command
-* `MONGODB_IP`, `RABBITMQ_IP`, `ELASTICSEARCH_IP`: IP addresses of services based on your cluster IP range setup
 * `CURATOR_ADDR`: Addresses of the Curator and Uploader 
 * `SMTP_SERVER`: Address of your SMTP server. Comment out or leave empty if email verification is not required
 * `ADMIN_EMAIL`: Email address of 4CeeD's admin
