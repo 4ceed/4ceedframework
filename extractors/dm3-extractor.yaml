@@ -17,5 +17,5 @@ spec:
         image: t2c2/dm3-extractor
         env:
         - name: "RABBITMQ_URL"
-          value: "rabbitmq"
+          value: "amqp://guest:guest@rabbitmq:5672/%2f"
         imagePullPolicy: Always
