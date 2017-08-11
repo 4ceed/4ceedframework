@@ -100,7 +100,7 @@ mongodb:
   ports:
     - "27017:27017"
   # volumes:
-  #   - clowder/mongo:/data/db
+  #   - /absolute/path/to/mongodb/data:/data/db
 
 # rabbitmq to connect to extractors
 rabbitmq:
@@ -109,14 +109,14 @@ rabbitmq:
     - "5672:5672"
     - "15672:15672"
   # volumes:
-  #   - clowder/rabbitmq:/var/lib/rabbitmq
+  #   - /absolute/path/to/rabbitmq/data:/var/lib/rabbitmq
 
 # elasticsearch to allow indexing
 elasticsearch:
-    image: elasticsearch:2
-    command: elasticsearch -Des.cluster.name="myesdb"
-    ports:
-        - "9200:9200"
-        - "9300:9300"
-    # volumes:
-    #     - ${PWD}/esdata:/usr/share/elasticsearch/data
+  image: elasticsearch:2
+  command: elasticsearch -Des.cluster.name="myesdb"
+  ports:
+    - "9200:9200"
+    - "9300:9300"
+  # volumes:
+  #     - /absolute/path/to/es/data:/usr/share/elasticsearch/data
