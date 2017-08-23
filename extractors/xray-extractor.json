@@ -1,5 +1,5 @@
 {
-    "name":"saxs-xray-extractor",
+    "name":"saxs.py-xray-extractor",
     "version":"1.0",
     "updated":"2016-01-01",
     "description":"Extractor for saxs xray files",

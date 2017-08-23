@@ -1,8 +1,8 @@
 {
-    "name":"zip.collection.create",
+    "name":"t2c2.image.preview",
     "version":"1.0",
-    "updated":"2017-02-20",
-    "description":"Extractor for zip file to create collection",
+    "updated":"2016-01-01",
+    "description":"Generate previews for general image formats, such as JPEG, TIFF, PNG",
     "author":"",
     "contributors":[],
     "contexts":[],
