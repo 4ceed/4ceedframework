@@ -5,6 +5,12 @@
 
 This repository consists of a collections of deployment scripts for various tools and components that make up the 4CeeD framework.
 
+## 4CeeD In Action
+
+Take a look at the following video to see how our scientific users use 4CeeD in real environment.
+
+[![4CeeD In Action](https://img.youtube.com/vi/ICDqsOGgwg0/0.jpg)](https://www.youtube.com/watch?v=ICDqsOGgwg0)
+
 ## Setup
 - [minikube](docs/minikube_setup.md): The most simple way to setup 4CeeD. Recommended for a quick test of 4CeeD functionalities.
 - [docker-compose](docs/docker_setup.md): Setup 4CeeD as a group of Docker containers running on a single machine.
