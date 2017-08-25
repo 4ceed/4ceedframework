@@ -5,7 +5,7 @@ Setup 4CeeD on Kubernetes Cluster
 
 ## Setup your own Kubernetes cluster
 
-We have [tested on Ubuntu](https://kubernetes.io/docs/getting-started-guides/ubuntu/manual/) (14.04 LTS) cluster with the following version configurations: `KUBE_VERSION=1.3.7`, `FLANNEL_VERSION=0.5.5`, and `ETCD_VERSION=2.3.1`. Tested version of Docker is `1.9.1` or later. Make sure you use appropriate [releases](https://github.com/kubernetes/kubernetes/releases) of Kubernetes with the right set of configuration. 
+We have tested successfully with Kubernetes v1.6.6 on a cluster running Ubuntu 16.04 LTS. Please refer to [our official instructions](docs/k8s_setup_ubuntu.md) to how to setup Kubernetes on your Ubuntu 16.04 LTS cluster.
 
 To setup Kubernetes on other operating systems, pick your own Kubernetes deployment solution [here](https://kubernetes.io/docs/setup/pick-right-solution/). 
 
