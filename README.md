@@ -7,7 +7,7 @@ This repository consists of a collections of deployment scripts for various tool
 
 ## 4CeeD In Action
 
-Take a look at the following Youtube video (opened in a new tab) to see how our scientific users use 4CeeD in real environment.
+Take a look at the following Youtube video to see how our scientific users use 4CeeD in real environment.
 
 <a href="https://www.youtube.com/watch?v=ICDqsOGgwg0" target="_blank"><img src="docs/4ceed_video_thumbnail.jpg" border="1px" height="300px" align="middle" alt="4CeeD In Action"/></a>
 
@@ -28,4 +28,4 @@ Take a look at the following Youtube video (opened in a new tab) to see how our 
 
 ## Contact
 
-Feel free to create an issue or pull request. Please contact Phuong Nguyen (pvnguye2 at illinois dot edu) if you have any question.
+Feel free to open issues or create pull requests. Please contact Phuong Nguyen (pvnguye2 at illinois dot edu), or [join 4CeeD's Slack channel](https://join.slack.com/t/4ceed/shared_invite/MjMyMDIyMDc2OTc4LTE1MDM2OTYzODUtNWU3ZWQ5Yzc1OA) if you have any question.
