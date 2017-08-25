@@ -5,7 +5,7 @@ Setup 4CeeD on Kubernetes Cluster
 
 ## Setup your own Kubernetes cluster
 
-We have tested successfully with Kubernetes v1.6.6 on a cluster running Ubuntu 16.04 LTS. Please refer to [our official instructions](docs/k8s_setup_ubuntu.md) to how to setup Kubernetes on your Ubuntu 16.04 LTS cluster.
+We have tested successfully with Kubernetes v1.6.6 on a cluster running Ubuntu 16.04 LTS. Please refer to [our official instructions](k8s_setup_ubuntu.md) to how to setup Kubernetes on your Ubuntu 16.04 LTS cluster.
 
 To setup Kubernetes on other operating systems, pick your own Kubernetes deployment solution [here](https://kubernetes.io/docs/setup/pick-right-solution/). 
 
