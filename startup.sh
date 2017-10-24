@@ -64,5 +64,7 @@ if [ "$TARGET" == "extractors" ] || [ "$TARGET" == "all" ]; then
 	$KUBECTL create -f extractors/xray-powder-extractor.yaml
 	$KUBECTL create -f extractors/afm-extractor.yaml
 	$KUBECTL create -f extractors/zip-extractor.yaml
+	$KUBECTL create -f extractors/rutherford-spe-extractor.yaml
+	$KUBECTL create -f extractors/rutherford-nra-extractor.yaml
 	sleep 5
 fi
