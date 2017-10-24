@@ -19,7 +19,7 @@ spec:
         - name: "RABBITMQ_URL"
           value: "rabbitmq"
         - name: "CLOWDER_URL"
-          value: "http://192.168.99.100:32500"
+          value: "http://192.17.237.43:32500"
         - name: "CLOWDER_PORT"
           value: "32500"
         - name: "CRED_NAME"

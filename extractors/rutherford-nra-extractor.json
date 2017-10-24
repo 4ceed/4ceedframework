@@ -1,0 +1,16 @@
+{
+    "name":"sims-nra",
+    "version":"1.0",
+    "updated":"2017-10-24",
+    "description":"Extractor for SIMS Rutherford NRA files.",
+    "author":"",
+    "contributors":[],
+    "contexts":[],
+    "repository": {
+        "repType":"git",
+        "repUrl":""
+    },
+    "external_services":[],
+    "libraries":[],
+    "bibtex":[]
+}
