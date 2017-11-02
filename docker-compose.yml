@@ -1,6 +1,6 @@
 # 4CeeD framework 
 4ceed:
-  image: t2c2/4ceedcurator:17.08
+  image: t2c2/4ceedcurator:17.10
   environment:
     CLOWDER_CONTEXT: "/"
     CLOWDER_ADMINS: "pvnguye2@illinois.edu"
@@ -40,7 +40,21 @@ dm3-extractor:
     RABBITMQ_URL: "amqp://guest:guest@rabbitmq:5672/%2f"
   links:
     - rabbitmq
- 
+
+rutherford-nra-extractor:
+  image: t2c2/rutherford-nra-extractor
+  environment:
+    RABBITMQ_URL: "amqp://guest:guest@rabbitmq:5672/%2f"
+  links:
+    - rabbitmq
+
+rutherford-spe-extractor:
+  image: t2c2/rutherford-spe-extractor
+  environment:
+    RABBITMQ_URL: "amqp://guest:guest@rabbitmq:5672/%2f"
+  links:
+    - rabbitmq
+
 image-preview-extractor:
   image: t2c2/image-preview-extractor 
   environment:
