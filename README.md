@@ -28,4 +28,4 @@ Take a look at the following Youtube video to see how our scientific users use 4
 
 ## Contact
 
-Feel free to open issues or create pull requests. Please contact Phuong Nguyen (pvnguye2 at illinois dot edu), or [join 4CeeD's Slack channel](https://join.slack.com/t/4ceed/shared_invite/MjMyMDIyMDc2OTc4LTE1MDM2OTYzODUtNWU3ZWQ5Yzc1OA) if you have any question.
+Feel free to open issues or create pull requests. Please [join 4CeeD's Slack channel](https://join.slack.com/t/4ceed/shared_invite/MjMyMDIyMDc2OTc4LTE1MDM2OTYzODUtNWU3ZWQ5Yzc1OA) if you have any question.

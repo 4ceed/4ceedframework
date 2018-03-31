@@ -36,6 +36,16 @@ By default, 4CeeD runs in non-persistent mode (i.e., data is lost after Docker i
     - /absolute/path/to/mongodb/data:/data/db
 ```
 
+## Scale extractors
+
+You can scale the number of replicas of each extractor by using `docker-compose scale` command. For example, to set 3 replicas for `dm3-extractor`, run the following command:
+
+```
+docker-compose scale dm3-extractor=3
+``` 
+
+We recommend that you increase the number of replicas for popularly used extractors to provide redundancy.
+
 ## Clear cached data of stopped containers
 
 Please notice that, `docker-compose` caches data of the stopped containers for the next run. To clear the cached data, run the following command:
