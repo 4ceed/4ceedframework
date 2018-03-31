@@ -1,6 +1,6 @@
 # 4CeeD framework 
 4ceed:
-  image: t2c2/4ceedcurator:17.11
+  image: t2c2/4ceedcurator:18.01.29
   environment:
     CLOWDER_CONTEXT: "/"
     CLOWDER_ADMINS: "pvnguye2@illinois.edu"
@@ -111,17 +111,17 @@ sem-extractor:
 # Mongodb database used to store metadata/data
 mongodb:
   image: mongo:3.2.1
-  ports:
-    - "27017:27017"
+  expose:
+    - "27017"
   # volumes:
   #   - /absolute/path/to/mongodb/data:/data/db
 
 # rabbitmq to connect to extractors
 rabbitmq:
   image: rabbitmq
-  ports:
-    - "5672:5672"
-    - "15672:15672"
+  expose:
+    - "5672"
+    - "15672"
   # volumes:
   #   - /absolute/path/to/rabbitmq/data:/var/lib/rabbitmq
 
@@ -129,8 +129,8 @@ rabbitmq:
 elasticsearch:
   image: elasticsearch:2
   command: elasticsearch -Des.cluster.name="myesdb"
-  ports:
-    - "9200:9200"
-    - "9300:9300"
+  expose:
+    - "9200"
+    - "9300"
   # volumes:
   #     - /absolute/path/to/es/data:/usr/share/elasticsearch/data
