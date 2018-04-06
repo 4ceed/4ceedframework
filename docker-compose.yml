@@ -13,7 +13,7 @@
     ELASTICSEARCH_SERVICE_CLUSTERNAME: "myesdb"
     ELASTICSEARCH_SERVICE_SERVER: "elasticsearch"
     ELASTICSEARCH_SERVICE_PORT: "9300"
-    UPDATE_MONGODB: "true"
+    UPDATE_MONGODB: "false"
     TOOLMANAGER_URI: ""
   ports:
     - "9000:9000"
@@ -111,8 +111,8 @@ sem-extractor:
 # Mongodb database used to store metadata/data
 mongodb:
   image: mongo:3.2.1
-  expose:
-    - "27017"
+  ports:
+    - "127.0.0.1:27017:27017"
   # volumes:
   #   - /absolute/path/to/mongodb/data:/data/db
 
