@@ -77,7 +77,7 @@ xray-powder-extractor:
     - rabbitmq
 
 zip-extractor:
-  image: t2c2/zip-extractor 
+  image: t2c2/zip-extractor:18.05.28
   environment:
     RABBITMQ_URL: "amqp://guest:guest@rabbitmq:5672/%2f"
     CLOWDER_URL: "http://4ceed:9000"
@@ -93,9 +93,9 @@ zip-extractor:
     - 4ceed
 
 sem-extractor:
-  image: t2c2/sem-extractor 
+  image: t2c2/sem-extractor:18.05.29 
   environment:
-    RABBITMQ_URL: "rabbitmq"
+    RABBITMQ_URL: "amqp://guest:guest@rabbitmq:5672/%2f"
     CLOWDER_URL: "http://4ceed:9000"
     CLOWDER_PORT: "9000"
     CRED_NAME: "guest"
