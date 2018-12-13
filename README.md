@@ -17,6 +17,11 @@ Take a look at the following Youtube video to see how our scientific users use 4
 - [Kubernetes](docs/kubernetes_setup.md): Setup 4CeeD on a Kubernetes cluster. Our recommended way to setup 4CeeD in production.
 - [Google Cloud Platform](docs/gcp_setup.md): Setup 4CeeD on using Google Cloud Platform's Container Engine. 
 
+## New Features - 2018/12
+- [Updated dashboard/visualization]
+- [Mobile view support]
+- [Jupyter notebook integration]
+- [Support for LDAP Authentication/CILogin]
 
 ## Other Resources
 - [Register extractors](docs/register_extractors.md) 
