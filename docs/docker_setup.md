@@ -1,9 +1,15 @@
-Setup 4CeeD using Docker Compose
+Setup 4CeeD using Docker Compose on CentOS 7
 ====
 
 ## Prerequisites
 
 For this type of deployment, we need [Docker](https://www.docker.com/get-docker) and [docker-compose](https://docs.docker.com/compose/). Particularly, 4CeeD Framework is deployed as a set of services running as Docker containers on a single machine. Since this is a non-Kubernetes setup, you will not get the benefits supported by Kubernetes, such as fault tolerance and easy scaling of applications.
+
+enum34 is required for 4ceed, the easiest way to install enum34 is via pip:
+
+```
+pip install --upgrade enum34
+```
 
 ## Setup 4CeeD
 
