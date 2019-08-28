@@ -61,5 +61,7 @@ docker-compose rm
 ```
 
 *Note: This command will NOT remove the data from persistent volume as described in previous section.*
+
+
 Now is an excellent time to configure access to 4ceed via http (80) or https (443) 
-[domain name](docs/domain_name.md)
+[domain name]domain_name.md)
