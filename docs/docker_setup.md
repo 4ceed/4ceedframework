@@ -10,6 +10,14 @@ enum34 is required for 4ceed, the easiest way to install enum34 is via pip:
 ```
 pip install --upgrade enum34
 ```
+## Download 4CeeD
+
+4Ceed is available from github, all you need to do is clone the 4ceedframework repository to your computer and go into the 4ceedframework directory:
+
+```
+git clone https://github.com/4ceed/4ceedframework.git
+cd 4ceedframework
+```
 
 ## Setup 4CeeD
 
