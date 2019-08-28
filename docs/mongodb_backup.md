@@ -1,4 +1,5 @@
 How to: Backup the MongoDB database
+====
 
 ## Backing up MongoDB
 
