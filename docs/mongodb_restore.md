@@ -14,9 +14,9 @@ You will need:
 1. Download the mongodb utilities that are compatible with the version of MongoDB running in the container.
 If you need to know what version you are running please refer to the **"What version of MongoDB do I have?"** section of  [Backing up the MongoDB database](mongodb_backup.md).
 
-2. If this is a new instance of 4CeeD, then you can restore the dump right into the new database. However if this is an exsisting server you need to power down the stack, and move/rename/delete the previous database. If you have the room on the disk I suggest you just mv the directory to something like originalDB_bad. 
+2. If this is a new instance of 4CeeD, then you can restore the dump right into the new database. However if this is an exsisting server you need to power down the stack, and move, rename, or delete the previous database. If you have the room on the disk I suggest you just mv the directory to something like originalDB_bad. 
 
-To find where your MongoDB database location is look for the Mongodb section in the 4ceedframework/docker-compose.yaml file:
+To find where your MongoDB database location is look for the Mongodb section in the `4ceedframework/docker-compose.yaml` file:
 
 ```
 # Mongodb database used to store metadata/data
@@ -28,8 +28,8 @@ mongodb:
     - /srv/data/mongodb/data:/data/db
 ```
 
-So for this instance I would rename /srv/data/mongodb/data to /srv/data/mongodb/bad_data 
-Then I would recreate the /srv/data/mongodb/data directory for a fresh database to restore my dump into. Do not do this until you power down the 4CeeD Stack, which is coming up next:
+So for this instance I would rename `/srv/data/mongodb/data` to `/srv/data/mongodb/bad_data` 
+Then I would recreate the `/srv/data/mongodb/data` directory for a fresh database to restore my dump into. Do not do this until you power down the 4CeeD Stack, which is coming up next:
 
 3. Power down the 4CeeD stack
 ```
