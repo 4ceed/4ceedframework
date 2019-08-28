@@ -1,6 +1,6 @@
 How to: Restore the MongoDB database
 ====
-The clowder database is the database where the 4CeeD data is kept.
+The **clowder** database is the database where the 4CeeD data is kept.
 
 ## Requirements
 
@@ -60,7 +60,7 @@ The overall syntax of this command will be:
 ```
 /PATH/TO/MONGORESTORE -h IP_ADDRESS_OF_MONGO_CONTAINER:27017 --DB clowder /PATH/TO/DUMP/FILE
 ```
-So my command to restore an old version of the clowder mongodb database is:
+So my command to restore an old version of the **clowder** MongoDB database is:
 
 ```
 /srv/4ceedframework/mongo3.2.1/bin/mongorestore -h 172.17.0.4:27017 --db clowder /home/rundblom/4CeeD-2019-07-11-1200/clowder
