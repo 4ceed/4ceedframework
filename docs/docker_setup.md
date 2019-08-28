@@ -64,4 +64,4 @@ docker-compose rm
 
 
 Now is an excellent time to configure access to 4ceed via http (80) or https (443) 
-[domain name](domain_name.md)
+[How to configure 4ceed to respond to DNS names](domain_name.md)
