@@ -1,4 +1,4 @@
-How to: Register Extractors
+How to: Register Extractors in Kubernetes
 ====
 
 To register extractors to 4CeeD framework, you first need to have a 4CeeD instance running and create an 

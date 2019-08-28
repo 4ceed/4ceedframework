@@ -17,6 +17,7 @@ Take a look at the following Youtube video to see how our scientific users use 4
 ## Legacy Setup Information
 - [minikube](docs/minikube_setup.md): Recommended for a quick setup of 4CeeD running on Kubernetes environment.
 - [Kubernetes](docs/kubernetes_setup.md): Setup 4CeeD on a Kubernetes cluster. Our recommended way to setup 4CeeD in production.
+- [How to: Register extractors in Kubernetes](docs/register_extractors.md) 
 - [Google Cloud Platform](docs/gcp_setup.md): Setup 4CeeD on using Google Cloud Platform's Container Engine. 
 - [Setup Kubernetes v1.6.6 on Ubuntu 16.04 LTS cluster](docs/k8s_setup_ubuntu.md)
 
@@ -27,7 +28,7 @@ Take a look at the following Youtube video to see how our scientific users use 4
 - [Support for LDAP Authentication/CILogin]
 
 ## Other Resources
-- [How to: Register extractors](docs/register_extractors.md) 
+
 - [How to: Run 4CeeD in persistent mode](docs/persistent_mode.md) 
 - [How to: Access 4CeeD using a DNS name](docs/domain_name.md) 
 - [How to: Upgrade 4CeeD components](docs/upgrade.md) 
