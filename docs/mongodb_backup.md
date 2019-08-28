@@ -1,7 +1,8 @@
 How to: Backup the MongoDB database
 ====
+The **clowder** database is the database where the 4CeeD data is kept.
 
-## Backing up MongoDB
+## Requirements
 
 You will need:
 - MongoDB utilities compatible with the version of MongoDB running in the MongoDB container: mainly mongodump
