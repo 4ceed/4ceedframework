@@ -13,6 +13,8 @@ Take a look at the following Youtube video to see how our scientific users use 4
 
 ## Setup
 - [docker-compose](docs/docker_setup.md): Setup 4CeeD as a group of Docker containers running on a single machine. The most simple way to setup 4CeeD. Recommended for a quick test of 4CeeD functionalities.
+
+## Legacy Setup Information
 - [minikube](docs/minikube_setup.md): Recommended for a quick setup of 4CeeD running on Kubernetes environment.
 - [Kubernetes](docs/kubernetes_setup.md): Setup 4CeeD on a Kubernetes cluster. Our recommended way to setup 4CeeD in production.
 - [Google Cloud Platform](docs/gcp_setup.md): Setup 4CeeD on using Google Cloud Platform's Container Engine. 
