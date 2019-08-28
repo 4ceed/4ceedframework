@@ -1,4 +1,4 @@
-Access 4CeeD through Domain Name
+How to: Access 4CeeD through Domain Name
 ====
 
 ## DNS setup
