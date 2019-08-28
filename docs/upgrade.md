@@ -1,4 +1,4 @@
-Upgrade 4CeeD Components
+How to: Upgrade 4CeeD Components
 ====
 
 You can upgrade 4CeeD's components individually by simply pointing to a new version of component's Docker image. For example, to upgrade 4CeeD Curator: 
