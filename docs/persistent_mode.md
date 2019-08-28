@@ -1,7 +1,7 @@
 Run 4CeeD in Persistent Mode
 ====
 
-With the default setting of 4CeeD, data is stored in a non-persistent mode (i.e., when the Kubernetes instance is taken down, the data is deleted). To enable the persistent mode, you can do the following steps:
+With the default setting of 4CeeD, data is stored in a non-persistent mode (i.e., when the instance is taken down, the data is deleted). To enable the persistent mode, you can do the following steps:
 
 ## Update database configs
 - To enable persistent mode for MongoDB, you first just need to edit file `tools/mongodb/mongodb-rc.yaml`, and change the `name` in:
