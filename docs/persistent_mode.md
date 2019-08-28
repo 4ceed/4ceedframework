@@ -1,4 +1,4 @@
-Run 4CeeD in Persistent Mode
+How to: Run 4CeeD in Persistent Mode
 ====
 
 With the default setting of 4CeeD, data is stored in a non-persistent mode (i.e., when the instance is taken down, the data is deleted). To enable the persistent mode, you can do the following steps:
