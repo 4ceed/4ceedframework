@@ -1,4 +1,4 @@
-How to: Roll back a 4CeeD Component
+How to: Roll back a 4CeeD component
 ====
 Lets say you try a new version of the curator but it does not work: you can roll it back fairly easily.
 
