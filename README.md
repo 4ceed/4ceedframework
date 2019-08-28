@@ -31,6 +31,7 @@ Take a look at the following Youtube video to see how our scientific users use 4
 - [How to: Run 4CeeD in persistent mode](docs/persistent_mode.md) 
 - [How to: Access 4CeeD using a DNS name](docs/domain_name.md) 
 - [How to: Upgrade 4CeeD components](docs/upgrade.md) 
+- [How to: Roll back a 4Ceed Component](docs/rollback_component.md)
 
 
 ## Contact
