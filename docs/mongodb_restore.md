@@ -12,7 +12,7 @@ You will need:
 ## Restoring the database
 
 1. Download the mongodb utilities that are compatible with the version of MongoDB running in the container.
-If you need to know what version you are running please refer to the "What version of MongoDB do I have?" section of  [Backing up the MongoDB database](mongodb_backup.md).
+If you need to know what version you are running please refer to the **"What version of MongoDB do I have?"** section of  [Backing up the MongoDB database](mongodb_backup.md).
 
 2. If this is a new instance of 4CeeD, then you can restore the dump right into the new database. However if this is an exsisting server you need to power down the stack, and move/rename/delete the previous database. If you have the room on the disk I suggest you just mv the directory to something like originalDB_bad. 
 
