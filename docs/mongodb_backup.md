@@ -6,6 +6,7 @@ How to: Backup the MongoDB database
 You will need:
 - MongoDB utilities compatible with the version of MongoDB running in the MongoDB container: mainly mongodump
 
+## What version of MongoDB do I have?
 How do I find out what version of MongoDB I am running?
 Method #1 
 Look for what MongoDB docker image you have:
