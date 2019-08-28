@@ -27,10 +27,10 @@ Take a look at the following Youtube video to see how our scientific users use 4
 - [Support for LDAP Authentication/CILogin]
 
 ## Other Resources
-- [Register extractors](docs/register_extractors.md) 
-- [Run 4CeeD in persistent mode](docs/persistent_mode.md) 
-- [Access 4CeeD using domain name](docs/domain_name.md) 
-- [Upgrade 4CeeD components](docs/upgrade.md) 
+- [How to: Register extractors](docs/register_extractors.md) 
+- [How to: Run 4CeeD in persistent mode](docs/persistent_mode.md) 
+- [How to: Access 4CeeD using a DNS name](docs/domain_name.md) 
+- [How to: Upgrade 4CeeD components](docs/upgrade.md) 
 
 
 ## Contact
