@@ -33,6 +33,7 @@ Take a look at the following Youtube video to see how our scientific users use 4
 - [How to: Upgrade 4CeeD components](docs/upgrade.md) 
 - [How to: Roll back a 4Ceed component](docs/rollback_component.md)
 - [How to: Backup the MongoDB database](docs/mongodb_backup.md)
+- [How to: Restore the MongoDB database](docs/mongodb_restore.md)
 
 
 ## Contact

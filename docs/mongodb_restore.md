@@ -16,7 +16,7 @@ If you need to know what version you are running please refer to the **"What ver
 
 2. If this is a new instance of 4CeeD, then you can restore the dump right into the new database. However if this is an exsisting server you need to power down the stack, and move, rename, or delete the previous database. If you have the room on the disk I suggest you just mv the directory to something like originalDB_bad. 
 
-To find where your MongoDB database location is look for the Mongodb section in the `4ceedframework/docker-compose.yaml` file:
+To find where your MongoDB database location is look for the Mongodb section in the **4ceedframework/docker-compose.yaml** file:
 
 ```
 # Mongodb database used to store metadata/data
