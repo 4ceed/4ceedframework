@@ -26,7 +26,7 @@ mongodump version: 3.2.1
 ```
 ## MongoDB Bacup Script
 
-Here is a handy backup script created by Gianni Pezzarosi and Phuong Nguyen to backup the MongDB datavase, compress it, and then email the status of it to someone.
+Here is a handy backup script created by Gianni Pezzarosi and Phuong Nguyen to backup the MongDB database, compress it, and then email the status of it to someone.
 
 ```
 #!/bin/bash
